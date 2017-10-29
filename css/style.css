@@ -664,7 +664,7 @@
       color: white;
       text-align:center;
       text-transform: uppercase;
-      padding: 10px 30px;
+      padding: 5px;
       font-size: 24px;
       display: inline-block;
       margin-top: 20px;
@@ -699,14 +699,14 @@
 
     .panel_left span{
       margin-top:10px;
-      font-size: 22px;
+      font-size: 20px;
       color: #5b5a5a;
       display: block;
     }
 
     .panel_right span {
       display: block;
-      font-size: 22px;
+      font-size: 20px;
       color: #24baa0;
       margin-top:10px;
     }
@@ -720,7 +720,6 @@
 
     .sum {
       display: inline-block;
-      width: 23%;
       text-align: right;
       margin-top: 10px;
       font-size: 22px;
@@ -743,9 +742,7 @@
     .list_panel {
       background-color: white;
       border: 1px solid #ccc;
-      width: 50%;
-      padding-left: 15px;
-      padding-bottom: 10px;
+      padding: 5px;
       list-style: none;
       margin: 0;
       left: 0;
@@ -796,6 +793,10 @@
 
         .drop_down_list {
             width: 80%;
+        }
+
+        .application .green_button {
+            padding: 10px 30px;
         }
     }
 

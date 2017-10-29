@@ -106,9 +106,9 @@ document.addEventListener("DOMContentLoaded", function(){
     liEl.forEach(function (el) {
         function calc(name, value) {
             name.innerText = el.innerText;
-            value.innerText = el.dataset.price + "zł";
+            value.innerText = el.dataset.price;
             counter += parseInt(el.dataset.price);
-            sum.innerText = counter + "zł";
+            sum.innerText = counter + " PLN";
         };
 
         el.addEventListener('click', function () {
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function(){
     transportInput.addEventListener("click", function () {
         if (transportInput.checked === true) {
             transport.innerText = "Transport";
-            transportValue.innerText = transportInput.dataset.transportPrice + "zł";
+            transportValue.innerText = transportInput.dataset.transportPrice;
             counter += parseInt(transportInput.dataset.transportPrice);
         }
         else {
@@ -136,8 +136,20 @@ document.addEventListener("DOMContentLoaded", function(){
             transportValue.innerText = "";
             counter -= parseInt(transportInput.dataset.transportPrice);
         }
-        sum.innerText = counter + "zł";
+        sum.innerText = counter + " PLN";
     });
+
+// PREVENT DEFAULT
+
+    var aEl = document.querySelectorAll("a");
+
+    for (var i=0; i<aEl.length; i++) {
+        aEl[i].addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+        })
+    }
 
 
 
