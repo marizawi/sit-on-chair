@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
     var chairs = document.getElementsByClassName("chair");
 
-    for (var i=0; i<chairs.length; i++) {
-        chairs[i].addEventListener("mouseenter", function() {
+    for (var i = 0; i < chairs.length; i++) {
+        chairs[i].addEventListener("mouseenter", function () {
             this.style.display = "none";
         });
     }
@@ -17,18 +17,17 @@ document.addEventListener("DOMContentLoaded", function(){
     var info1 = document.querySelector(".info1");
     var info2 = document.querySelector(".info2");
 
-    info1.addEventListener("mouseleave", function(){
-        for (var i=0; i<chairs.length; i++) {
+    info1.addEventListener("mouseleave", function () {
+        for (var i = 0; i < chairs.length; i++) {
             chairs[i].style.display = "block";
         }
     })
 
-    info2.addEventListener("mouseleave", function(){
-        for (var i=0; i<chairs.length; i++) {
+    info2.addEventListener("mouseleave", function () {
+        for (var i = 0; i < chairs.length; i++) {
             chairs[i].style.display = "block";
         }
     })
-
 
 
 // SLIDER
@@ -39,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var current = 0;
 
     var pictureIndex = [];
-    for (var i=0; i<listElements.length; i++) {
+    for (var i = 0; i < listElements.length; i++) {
         pictureIndex.push(listElements[i]);
     }
 
@@ -49,10 +48,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
 // 4
 
-    buttonNext.addEventListener('click', function(){
+    buttonNext.addEventListener('click', function () {
         listElements[current].classList.remove("visible");
 
-        if (current < listElements.length-1) {
+        if (current < listElements.length - 1) {
             current++;
         } else {
             current = 0;
@@ -62,13 +61,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
     })
 
-    buttonPrev.addEventListener('click', function(){
+    buttonPrev.addEventListener('click', function () {
         listElements[current].classList.remove("visible");
 
         if (current > 0) {
             current--;
         } else {
-            current = listElements.length-1;
+            current = listElements.length - 1;
         }
 
         listElements[current].classList.add("visible");
@@ -92,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function(){
     var transportInput = document.querySelector('.checkbox input');
     var transport = document.querySelector('.panel_left .transport');
     var transportValue = document.querySelector('.panel_right .transport.value');
-
 
 
     dropdown.forEach(function (el) {
@@ -143,14 +141,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var aEl = document.querySelectorAll("a");
 
-    for (var i=0; i<aEl.length; i++) {
+    for (var i = 0; i < aEl.length; i++) {
         aEl[i].addEventListener("click", function (e) {
 
             e.preventDefault();
 
         })
     }
-
 
 
 });
